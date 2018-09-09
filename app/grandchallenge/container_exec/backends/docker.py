@@ -137,6 +137,8 @@ class Executor(object):
                     self._input_volume: {"bind": "/input/", "mode": "rw"},
                     self._output_volume: {"bind": "/output/", "mode": "rw"},
                 },
+                # TODO: Add nvidia runtime
+                # runtime="nvidia",
                 **self._run_kwargs,
             )
         except ContainerError as exc:
